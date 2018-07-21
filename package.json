@@ -1,0 +1,39 @@
+{
+  "name": "@typecasting/rpscript-api-ramda",
+  "version": "0.1.0",
+  "description": "RPScript API for Ramda",
+  "keywords": [
+    "api",
+    "rpa",
+    "rpscript",
+    "ramda"
+  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "license": "Apache-2.0",
+  "author": "James Chong",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wei3hua2/rpscript-api-ramda.git"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "test": "mocha -r ts-node/register test/**.ts"
+  },
+  "dependencies": {
+    "@types/ramda": "^0.25.35",
+    "async": "^2.6.1",
+    "ramda": "^0.25.0",
+    "rpscript-interface": "^0.6.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.4",
+    "@types/lodash": "^4.14.110",
+    "@types/node": "^10.5.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.8.3"
+  }
+}
