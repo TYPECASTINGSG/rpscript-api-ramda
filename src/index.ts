@@ -2537,6 +2537,333 @@ async when (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
 
   // ********  Relation  ********
 
+ /**
+ * @function clamp
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#clamp}
+*/
+@rpsAction({verbName:'clamp'})
+async clamp (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.clamp.apply(this,params);
+}
+
+ /**
+ * @function countBy
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#countBy}
+*/
+@rpsAction({verbName:'count-by'})
+async countBy (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.countBy.apply(this,params);
+}
+
+ /**
+ * @function difference
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#difference}
+*/
+@rpsAction({verbName:'difference'})
+async difference (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.difference.apply(this,params);
+}
+
+ /**
+ * @function differenceWith
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#differenceWith}
+*/
+@rpsAction({verbName:'difference-with'})
+async differenceWith (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.differenceWith.apply(this,params);
+}
+
+ /**
+ * @function eqBy
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#eqBy}
+*/
+@rpsAction({verbName:'eq-by'})
+async eqBy (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.eqBy.apply(this,params);
+}
+
+ /**
+ * @function equals
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#equals}
+*/
+@rpsAction({verbName:'equals'})
+async equals (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.equals.apply(this,params);
+}
+
+ /**
+ * @function gt
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#gt}
+*/
+@rpsAction({verbName:'gt'})
+async gt (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.gt.apply(this,params);
+}
+
+ /**
+ * @function gte
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#gte}
+*/
+@rpsAction({verbName:'gte'})
+async gte (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.gte.apply(this,params);
+}
+
+ /**
+ * @function identical
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#identical}
+*/
+@rpsAction({verbName:'identical'})
+async identical (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.identical.apply(this,params);
+}
+
+ /**
+ * @function innerJoin
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#innerJoin}
+*/
+@rpsAction({verbName:'inner-join'})
+async innerJoin (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  //@ts-ignore
+  return R.innerJoin.apply(this,params);
+}
+
+ /**
+ * @function intersection
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#intersection}
+*/
+@rpsAction({verbName:'intersection'})
+async intersection (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.intersection.apply(this,params);
+}
+
+ /**
+ * @function lt
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#lt}
+*/
+@rpsAction({verbName:'lt'})
+async lt (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.lt.apply(this,params);
+}
+
+ /**
+ * @function lte
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#lte}
+*/
+@rpsAction({verbName:'lte'})
+async lte (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.lte.apply(this,params);
+}
+
+ /**
+ * @function max
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#max}
+*/
+@rpsAction({verbName:'max'})
+async max (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.max.apply(this,params);
+}
+
+ /**
+ * @function maxBy
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#maxBy}
+*/
+@rpsAction({verbName:'max-by'})
+async maxBy (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.maxBy.apply(this,params);
+}
+
+ /**
+ * @function min
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#min}
+*/
+@rpsAction({verbName:'min'})
+async min (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.min.apply(this,params);
+}
+
+ /**
+ * @function minBy
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#minBy}
+*/
+@rpsAction({verbName:'min-by'})
+async minBy (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.minBy.apply(this,params);
+}
+
+ /**
+ * @function pathEq
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#pathEq}
+*/
+@rpsAction({verbName:'path-eq'})
+async pathEq (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.pathEq.apply(this,params);
+}
+
+ /**
+ * @function propEq
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#propEq}
+*/
+@rpsAction({verbName:'prop-eq'})
+async propEq (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.propEq.apply(this,params);
+}
+
+ /**
+ * @function sortBy
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#sortBy}
+*/
+@rpsAction({verbName:'sort-by'})
+async sortBy (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.sortBy.apply(this,params);
+}
+
+ /**
+ * @function sortWith
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#sortWith}
+*/
+@rpsAction({verbName:'sort-with'})
+async sortWith (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.sortWith.apply(this,params);
+}
+
+ /**
+ * @function symmetricDifference
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#symmetricDifference}
+*/
+@rpsAction({verbName:'symmetric-difference'})
+async symmetricDifference (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.symmetricDifference.apply(this,params);
+}
+
+ /**
+ * @function symmetricDifferenceWith
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#symmetricDifferenceWith}
+*/
+@rpsAction({verbName:'symmetric-difference-with'})
+async symmetricDifferenceWith (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.symmetricDifferenceWith.apply(this,params);
+}
+
+ /**
+ * @function union
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#union}
+*/
+@rpsAction({verbName:'union'})
+async union (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.union.apply(this,params);
+}
+
+ /**
+ * @function unionWith
+ * @memberof Ramda
+ * 
+ * @param {Array} params
+ * 
+ * @see {@link https://lodash.com/docs#unionWith}
+*/
+@rpsAction({verbName:'union-with'})
+async unionWith (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.unionWith.apply(this,params);
+}
+
+
   // ********  Type  ********
 
  /**
