@@ -3195,5 +3195,20 @@ async toUpper (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   return R.toUpper.apply(this,params);
 }
 
+// ********** CUSTOMIZE **********
+
+ /**
+ * @function regexp
+ * @memberof Ramda
+ * 
+ * @param {RegExp} regexp regular expression
+ * 
+*/
+@rpsAction({verbName:'regexp'})
+async regexp (ctx:RpsContext,opts:{}, regexp:string) : Promise<RegExp> {
+  return new RegExp(regexp);
+}
+
+
 }
 
