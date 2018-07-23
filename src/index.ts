@@ -218,8 +218,15 @@ async endsWith (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
  * @see {@link https://lodash.com/docs#filter}
 */
 @rpsAction({verbName:'filter'})
-async filter (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
-  return R.filter.apply(this,params);
+filter (ctx:RpsContext,opts:{}, fn:any, functor:any[]) : Promise<any[]> {
+  var func = async (val, cb) => cb(null,await fn(val));
+
+  return new Promise((resolve,reject)=> {
+    async.filterSeries(functor,func, (err, results) => {
+      if (err) reject(err);
+      else resolve(results);
+    });
+  });
 }
 
 /**
@@ -491,8 +498,15 @@ async length (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
  * @see {@link https://lodash.com/docs#map}
 */
 @rpsAction({verbName:'map'})
-async map (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
-  return R.map.apply(this,params);
+map (ctx:RpsContext,opts:{}, fn:Function,functor:any[]) : Promise<any[]> {
+  var func = async (val, cb) => cb(null,await fn(val));
+
+  return new Promise((resolve,reject)=> {
+    async.mapSeries(functor,func, (err, results) => {
+      if (err) reject(err);
+      else resolve(results);
+    });
+  });
 }
 
 /**
