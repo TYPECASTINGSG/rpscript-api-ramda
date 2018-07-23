@@ -65,6 +65,19 @@ async aperture (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
 }
 
 /**
+ * @function append
+ * @memberof Ramda
+ * 
+ * @param {Array} params 
+ * 
+ * @see {@link https://lodash.com/docs#append}
+*/
+@rpsAction({verbName:'append'})
+async append (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.append.apply(this,params);
+}
+
+/**
  * @function chain
  * @memberof Ramda
  * 
