@@ -218,7 +218,20 @@ async endsWith (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
  * @see {@link https://lodash.com/docs#filter}
 */
 @rpsAction({verbName:'filter'})
-filter (ctx:RpsContext,opts:{}, fn:any, functor:any[]) : Promise<any[]> {
+filter (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any[]> {
+  return R.filter.apply(this,params);
+}
+
+/**
+ * @function filter-series
+ * @memberof Ramda
+ * 
+ * @param {Array} params 
+ * 
+ * @see {@link https://lodash.com/docs#filter}
+*/
+@rpsAction({verbName:'filter-series'})
+filterSeries (ctx:RpsContext,opts:{}, fn:any, functor:any[]) : Promise<any[]> {
   var func = async (val, cb) => cb(null,await fn(val));
 
   return new Promise((resolve,reject)=> {
@@ -498,7 +511,20 @@ async length (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
  * @see {@link https://lodash.com/docs#map}
 */
 @rpsAction({verbName:'map'})
-map (ctx:RpsContext,opts:{}, fn:Function,functor:any[]) : Promise<any[]> {
+map (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any[]> {
+  return R.map.apply(this,params);
+}
+
+/**
+ * @function map-series
+ * @memberof Ramda
+ * 
+ * @param {Array} params 
+ * 
+ * @see {@link https://lodash.com/docs#map}
+*/
+@rpsAction({verbName:'map-series'})
+mapSeries (ctx:RpsContext,opts:{}, fn:Function,functor:any[]) : Promise<any[]> {
   var func = async (val, cb) => cb(null,await fn(val));
 
   return new Promise((resolve,reject)=> {
