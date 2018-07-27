@@ -143,14 +143,14 @@ async dropLast (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
 }
 
 /**
- * @function dropLastWhile
+ * @function drop-last-while
  * @memberof Ramda
  * 
  * @param {Array} params 
  * 
  * @see {@link https://lodash.com/docs#dropLastWhile}
 */
-@rpsAction({verbName:'dropLastWhile'})
+@rpsAction({verbName:'drop-last-while'})
 async dropLastWhile (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   return R.dropLastWhile.apply(this,params);
 }
