@@ -386,6 +386,19 @@ async indexOf (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
 }
 
 /**
+ * @function indexBy
+ * @memberof Ramda
+ * 
+ * @param {Array} params 
+ * 
+ * @see {@link https://lodash.com/docs#indexBy}
+*/
+@rpsAction({verbName:'index-by'})
+async indexBy (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  return R.indexBy.apply(this,params);
+}
+
+/**
  * @function init
  * @memberof Ramda
  * 
@@ -1741,6 +1754,19 @@ async whereEq (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   // ********  Function  ********
 
 /**
+ * @function __
+ * @memberof Ramda
+ * 
+ * 
+ * @see {@link https://ramdajs.com/docs/#module.exports}
+*/
+@rpsAction({verbName:'__'})
+async underscore (ctx:RpsContext,opts:{}) : Promise<any> {
+  //@ts-ignore
+  return R.__;
+}
+
+/**
  * @function addIndex
  * @memberof Ramda
  * 
@@ -2021,7 +2047,7 @@ async empty (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
  * 
  * @see {@link https://lodash.com/docs#F}
 */
-@rpsAction({verbName:'F'})
+@rpsAction({verbName:'f'})
 async F (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   return R.F.apply(this,params);
 }
@@ -2169,18 +2195,19 @@ async nthArg (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   return R.nthArg.apply(this,params);
 }
 
-// /**
-//  * @function o
-//  * @memberof Ramda
-//  * 
-//  * @param {Array} params 
-//  * 
-//  * @see {@link https://lodash.com/docs#o}
-// */
-// @rpsAction({verbName:'o'})
-// async o (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
-//   return R.o.apply(this,params);
-// }
+/**
+ * @function o
+ * @memberof Ramda
+ * 
+ * @param {Array} params 
+ * 
+ * @see {@link https://lodash.com/docs#o}
+*/
+@rpsAction({verbName:'o'})
+async o (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
+  //@ts-ignore
+  return R.o.apply(this,params);
+}
 
 /**
  * @function of
