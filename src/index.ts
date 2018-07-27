@@ -1839,7 +1839,7 @@ async applySpec (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
  * 
  * @see {@link https://lodash.com/docs#applyTo}
 */
-@rpsAction({verbName:'applyTo'})
+@rpsAction({verbName:'apply-to'})
 async applyTo (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   return R.applyTo.apply(this,params);
 }
