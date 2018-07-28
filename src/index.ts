@@ -3278,6 +3278,18 @@ async toUpper (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
 // ********** CUSTOMIZE **********
 
  /**
+ * @function r
+ * @memberof Ramda
+ * 
+ * @param {string} functionName functionName
+ * 
+*/
+@rpsAction({verbName:'r'})
+async r (ctx:RpsContext,opts:{}, functionName:string) : Promise<any> {
+  return R[functionName];
+}
+
+ /**
  * @function regexp
  * @memberof Ramda
  * 

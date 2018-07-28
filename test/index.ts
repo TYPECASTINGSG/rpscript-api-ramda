@@ -28,6 +28,9 @@ m.describe('Ramda', () => {
     c.expect(result2).to.be.deep.equals([false,true,false]);
     c.expect(result3).to.be.deep.equals(['ABA','ABB','ABC']);
 
+    let result4 = await ramda.r(ctx,{},'T');
+    c.expect(result4()).to.be.true;
+
   });
 
 })
