@@ -2118,14 +2118,14 @@ async lift (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
 }
 
 /**
- * @function liftN
+ * @function lift-n
  * @memberof Ramda
  * 
  * @param {Array} params 
  * 
  * @see {@link https://lodash.com/docs#liftN}
 */
-@rpsAction({verbName:'liftN'})
+@rpsAction({verbName:'lift-n'})
 async liftN (ctx:RpsContext,opts:{}, ...params:any[]) : Promise<any> {
   return R.liftN.apply(this,params);
 }
